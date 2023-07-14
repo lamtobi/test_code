@@ -2,9 +2,11 @@ package com.example.test_code;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +20,7 @@ UserAdapter adapter;
         setContentView(R.layout.activity_main);
        recyclerView=findViewById(R.id.rcl);
         adapter=new UserAdapter(this);
-        GridLayoutManager layout=new GridLayoutManager(this,3);
+        LinearLayoutManager layout=new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(layout);
 
         adapter.setdata(getList());
